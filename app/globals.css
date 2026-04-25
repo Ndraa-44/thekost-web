@@ -17,3 +17,9 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Light Architectural Grid Lines */
+.bg-grid-lines {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20% 100%;
+}
