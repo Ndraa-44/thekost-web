@@ -4,7 +4,7 @@ import { Home, Building, MapPin } from 'lucide-react';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-32 border-b border-gray-100 scroll-mt-24">
+    <section id="about" className="py-32 border-b border-gray-100">
       <div className="text-center mb-24 relative">
         <h2 className="text-[10px] font-bold tracking-[0.4em] text-gray-400 uppercase mb-4">About TheKost</h2>
         <p className="text-3xl md:text-4xl font-extrabold text-gray-900 max-w-2xl mx-auto uppercase tracking-tight">

@@ -7,7 +7,7 @@ import { Globe, Phone, Mail, ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section id="home" className="h-[calc(100vh-96px)] flex border-b border-gray-100 scroll-mt-24">
+    <section className="h-[calc(100vh-96px)] flex border-b border-gray-100">
       {/* Left Sidebar */}
       <div className="hidden md:flex w-1/5 h-full flex-col justify-between py-12 border-r border-gray-100 pr-8">
         <div className="text-5xl font-light text-gray-900">

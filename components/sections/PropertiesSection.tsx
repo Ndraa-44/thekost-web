@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function PropertiesSection() {
   return (
-    <section id="properties" className="py-32 border-b border-gray-100 scroll-mt-24">
+    <section id="properties" className="py-32 border-b border-gray-100">
       <div className="text-center mb-16">
         <h2 className="text-[10px] font-bold tracking-[0.4em] text-gray-400 uppercase">Our Properties</h2>
       </div>

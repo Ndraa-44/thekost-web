@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <section id="contact" className="py-32 relative scroll-mt-24">
+    <section id="contact" className="py-32 relative">
       <div className="text-center mb-24">
         <h2 className="text-[10px] font-bold tracking-[0.4em] text-gray-400 uppercase">Get In Touch</h2>
       </div>
