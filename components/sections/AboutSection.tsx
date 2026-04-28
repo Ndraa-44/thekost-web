@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Home, Building, MapPin } from 'lucide-react';
 
 export function AboutSection() {
@@ -46,7 +47,7 @@ export function AboutSection() {
         </div>
 
         <div className="h-80 bg-gray-100 rounded-lg overflow-hidden shadow-lg relative">
-          <img src="/images/kost_room_2.png" alt="Interior" className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-700" />
+          <Image src="/images/kost_room_2.png" alt="Interior" fill className="object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-700" />
           <div className="absolute inset-0 border-[10px] border-white/10 pointer-events-none"></div>
         </div>
       </div>

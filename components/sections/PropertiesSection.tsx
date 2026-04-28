@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export function PropertiesSection() {
   return (
@@ -16,7 +17,7 @@ export function PropertiesSection() {
           { title: "Kos Eksklusif Minimalis", location: "Kulon Progo", img: "/images/kost_room_4.png" }
         ].map((prop, i) => (
           <div key={i} className="min-w-[85vw] md:min-w-[420px] h-[650px] relative group overflow-hidden snap-center cursor-pointer bg-gray-100 rounded-sm">
-            <img src={prop.img} alt={prop.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+            <Image src={prop.img} alt={prop.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent transition-opacity duration-500 group-hover:opacity-80"></div>
             <div className="absolute inset-0 p-12 flex flex-col justify-end">
               <div className="text-[10px] font-bold tracking-[0.3em] text-blue-400 uppercase mb-3 -rotate-90 origin-bottom-left absolute left-12 bottom-32 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-y-0 translate-y-4">

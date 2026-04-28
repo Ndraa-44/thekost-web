@@ -6,6 +6,7 @@ import {
   Signal, Wifi, Battery, Bell, MapPin, ChevronDown, 
   Home, Building, Search, Heart, Star, Navigation, Calendar, User 
 } from 'lucide-react';
+import Image from 'next/image';
 
 export function MobileAppSection() {
   const [promoIndex, setPromoIndex] = React.useState(0);
@@ -18,8 +19,8 @@ export function MobileAppSection() {
   ], []);
 
   const locations = React.useMemo(() => [
-    { id: 1, image: 'images/kost_room_1.png', title: 'Sleman' },
-    { id: 2, image: 'images/kost_room_2.png', title: 'Bantul' },
+    { id: 1, image: '/images/kost_room_1.png', title: 'Sleman' },
+    { id: 2, image: '/images/kost_room_2.png', title: 'Bantul' },
     { id: 3, image: 'https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=600', title: 'Kota Jogja' },
     { id: 4, image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=600', title: 'Gunung Kidul' },
     { id: 5, image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=600', title: 'Kulon Progo' }
@@ -84,8 +85,8 @@ export function MobileAppSection() {
 
                  <div className="flex items-center justify-between mt-2">
                    <div className="flex items-center gap-3">
-                     <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden border-2 border-white/20">
-                       <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=150" alt="Profile" className="w-full h-full object-cover" />
+                     <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden border-2 border-white/20 relative">
+                       <Image src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=150" alt="Profile" fill className="object-cover" />
                      </div>
                      <div className="text-white font-bold text-xl tracking-wide">TheKost</div>
                    </div>
@@ -136,15 +137,15 @@ export function MobileAppSection() {
                     className="mt-6 px-4"
                  >
                    <div className="relative w-full h-24 rounded-2xl overflow-hidden cursor-pointer shadow-sm group">
-                     <motion.img 
+                     <motion.div 
                        key={`promo-${promoIndex}`}
                        initial={{ opacity: 0, scale: 1.05 }}
                        animate={{ opacity: 1, scale: 1 }}
                        transition={{ duration: 0.5 }}
-                       src={promos[promoIndex].image} 
-                       alt="Promo" 
-                       className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" 
-                     />
+                       className="absolute inset-0 w-full h-full group-hover:scale-110 transition-transform duration-700" 
+                     >
+                       <Image src={promos[promoIndex].image} alt="Promo" fill className="object-cover opacity-90" />
+                     </motion.div>
                      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 to-transparent flex items-center p-4">
                        <div className="text-white font-bold tracking-widest text-xs bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
                          {promos[promoIndex].title}
@@ -170,15 +171,15 @@ export function MobileAppSection() {
                    </div>
                    
                    <div className="relative w-full h-24 rounded-2xl overflow-hidden cursor-pointer shadow-sm group">
-                     <motion.img 
+                     <motion.div 
                        key={`loc-${locationIndex}`}
                        initial={{ opacity: 0, scale: 1.05 }}
                        animate={{ opacity: 1, scale: 1 }}
                        transition={{ duration: 0.4 }}
-                       src={locations[locationIndex].image} 
-                       alt="Location" 
-                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                     />
+                       className="absolute inset-0 w-full h-full group-hover:scale-110 transition-transform duration-700" 
+                     >
+                       <Image src={locations[locationIndex].image} alt="Location" fill className="object-cover" />
+                     </motion.div>
                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent flex flex-col justify-end p-3">
                        <div className="text-white font-bold text-[13px] drop-shadow-md">
                          {locations[locationIndex].title}
@@ -206,7 +207,7 @@ export function MobileAppSection() {
                      { id: 2, image: '/images/kost_room_2.png', title: 'Kos putra Eksklusif Jakal Sleman', price: 'Rp 1.200.000' }
                    ].map((item) => (
                      <div key={item.id} className="relative h-48 rounded-[20px] overflow-hidden group cursor-pointer shadow-md">
-                       <img src={item.image} alt="Kost" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                       <Image src={item.image} alt="Kost" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                        
                        <div className="absolute top-2 left-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-red-500 shadow-sm z-10">
                          <Heart size={12} fill="currentColor" />

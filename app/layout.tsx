@@ -8,8 +8,32 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "thekost - Temukan Hunian Ideal di Jogja",
-  // description: "Sewa kost, villa, atau homestay aman, nyaman, dan terpercaya langsung dari ujung jari Anda.",
+  metadataBase: new URL("https://thekost.id"),
+  title: "thekost - Platform Sewa Kost, Villa, dan Homestay",
+  description: "thekost: Platform terpercaya untuk mencari dan menyewa kost, villa, dan homestay dengan mudah, aman, dan nyaman di berbagai lokasi pilihan Anda.",
+  keywords: [
+    "thekost", 
+    "sewa kost", 
+    "sewa villa", 
+    "sewa homestay", 
+    "kost eksklusif jogja", 
+    "penginapan nyaman", 
+    "cari kost"
+  ],
+  openGraph: {
+    title: "thekost - Platform Sewa Kost, Villa, dan Homestay",
+    description: "thekost: Platform terpercaya untuk mencari dan menyewa kost, villa, dan homestay dengan mudah, aman, dan nyaman di berbagai lokasi pilihan Anda.",
+    url: "https://thekost.id",
+    siteName: "thekost",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "thekost - Platform Sewa Kost, Villa, dan Homestay",
+    description: "thekost: Platform terpercaya untuk mencari dan menyewa kost, villa, dan homestay dengan mudah.",
+  },
+  authors: [{ name: "thekost" }],
 };
 
 export default function RootLayout({

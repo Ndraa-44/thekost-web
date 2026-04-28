@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Globe, Phone, Mail, ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
@@ -29,10 +30,12 @@ export function HeroSection() {
       {/* Main Hero */}
       <div className="w-full md:w-4/5 h-full relative bg-gray-50 flex items-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600" 
             alt="Hero Background" 
-            className="w-full h-full object-cover object-center"
+            fill
+            priority
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/40 to-transparent"></div>
         </div>

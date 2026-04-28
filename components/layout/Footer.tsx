@@ -11,12 +11,12 @@ export function Footer() {
         <div className="md:w-1/3 flex flex-col gap-10 text-[13px] text-gray-500 font-medium">
           <div>
             <strong className="block text-gray-900 mb-2 font-bold tracking-widest uppercase text-[10px]">Phone</strong>
-            +62 812 3456 7890<br/>
+            +62 857-4011-2525<br/>
             +62 898 7654 3210
           </div>
           <div>
             <strong className="block text-gray-900 mb-2 font-bold tracking-widest uppercase text-[10px]">Email</strong>
-            hello@thekost.com
+            thekostyogya.id@gmail.com
           </div>
           <div>
             <strong className="block text-gray-900 mb-2 font-bold tracking-widest uppercase text-[10px]">Address</strong>

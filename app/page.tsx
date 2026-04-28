@@ -9,9 +9,42 @@ import { StatsSection } from '@/components/sections/StatsSection';
 import { PartnersSection } from '@/components/sections/PartnersSection';
 
 export default function Page() {
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'thekost',
+    url: 'https://thekost.id',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://thekost.id/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+  
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'thekost',
+    url: 'https://thekost.id',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'thekostyogya.id@gmail.com',
+      contactType: 'customer service'
+    }
+  };
+
   return (
-    <main className="relative min-h-screen bg-white text-gray-900 font-sans overflow-hidden">
-      {/* Grid Lines Overlay */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <main className="relative min-h-screen bg-white text-gray-900 font-sans overflow-hidden">
+        {/* Grid Lines Overlay */}
       <div className="absolute inset-0 pointer-events-none flex justify-between px-[5vw] max-w-[1600px] mx-auto z-0">
         <div className="w-[1px] h-full bg-gray-100"></div>
         <div className="w-[1px] h-full bg-gray-100 hidden md:block"></div>
@@ -31,5 +64,6 @@ export default function Page() {
         <Footer />
       </div>
     </main>
+    </>
   );
 }
