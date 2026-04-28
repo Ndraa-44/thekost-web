@@ -53,8 +53,8 @@ export default function Page() {
         <div className="w-[1px] h-full bg-gray-100"></div>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-[5vw] relative z-10">
-        <Navbar />
+      <Navbar />
+      <div className="max-w-[1600px] mx-auto px-[5vw] relative z-10 pt-24">
         <HeroSection />
         <MobileAppSection />
         <AboutSection />
