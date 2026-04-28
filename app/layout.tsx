@@ -8,8 +8,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "D'Kost - Temukan Hunian Ideal di Jogja",
-  description: "Sewa kost, villa, atau homestay aman, nyaman, dan terpercaya langsung dari ujung jari Anda.",
+  title: "thekost - Temukan Hunian Ideal di Jogja",
+  // description: "Sewa kost, villa, atau homestay aman, nyaman, dan terpercaya langsung dari ujung jari Anda.",
 };
 
 export default function RootLayout({

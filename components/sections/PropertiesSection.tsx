@@ -9,10 +9,11 @@ export function PropertiesSection() {
       
       <div className="flex -mx-[5vw] overflow-x-auto snap-x scrollbar-hide px-[5vw] gap-2 pb-10">
         {[
-          { title: "Kos Putri Donda", location: "Demangan, Yogyakarta", img: "/images/kost_room_1.png" },
+          { title: "Kos Putri Donda", location: "Demangan, Yogyakarta", img: "/images/kost_room_3.png" },
           { title: "Eksklusif Jakal", location: "Sleman, Yogyakarta", img: "/images/kost_room_2.png" },
-          { title: "Modern Homestay", location: "Kota Jogja", img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800" },
-          { title: "Minimalist Villa", location: "Gunungkidul", img: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=800" }
+          { title: "Modern Homestay", location: "Kota Jogja", img: "/images/kost_room_1.png" },
+          { title: "Minimalist Villa", location: "Gunungkidul", img: "/images/villa_1.png" },
+          { title: "Kos Eksklusif Minimalis", location: "Kulon Progo", img: "/images/kost_room_4.png" }
         ].map((prop, i) => (
           <div key={i} className="min-w-[85vw] md:min-w-[420px] h-[650px] relative group overflow-hidden snap-center cursor-pointer bg-gray-100 rounded-sm">
             <img src={prop.img} alt={prop.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
