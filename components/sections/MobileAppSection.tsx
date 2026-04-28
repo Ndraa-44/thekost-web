@@ -88,7 +88,7 @@ export function MobileAppSection() {
                      <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden border-2 border-white/20 relative">
                        <Image src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=150" alt="Profile" fill className="object-cover" />
                      </div>
-                     <div className="text-white font-bold text-xl tracking-wide">TheKost</div>
+                     <div className="text-white font-bold text-2xl tracking-tighter">thekost.</div>
                    </div>
                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white cursor-pointer hover:bg-white/30 transition">
                      <Bell size={20} />

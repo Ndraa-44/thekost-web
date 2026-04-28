@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -23,8 +24,8 @@ export function Footer() {
             Jl. Kaliurang KM 5, Sleman<br/>
             Yogyakarta, Indonesia
           </div>
-          <div className="font-extrabold text-3xl text-gray-900 tracking-tighter flex items-center gap-2 mt-12">
-            <div className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center text-2xl">T</div>
+          <div className="font-extrabold text-3xl text-blue-600 tracking-tighter flex items-center gap-1 mt-12">
+            <Image src="/icon.png" alt="TheKost Logo" width={40} height={40} className="w-10 h-10 object-contain" />
             thekost.
           </div>
         </div>
